@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "builds": [
+      {
+        "src": "inter-frontend folder/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/inter-frontend folder/css_folder/(.*)",
+        "dest": "/inter-frontend folder/css_folder/$1"
+      },
+      {
+        "src": "/inter-frontend folder/javascript_folder/(.*)",
+        "dest": "/inter-frontend folder/javascript_folder/$1"
+      },
+      {
+        "src": "/inter-frontend folder/image/(.*)",
+        "dest": "/inter-frontend folder/image/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/inter-frontend folder/html_folder/index.html"
+      }
+    ]
+}
